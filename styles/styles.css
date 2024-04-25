@@ -1,0 +1,163 @@
+ @font-face {
+    font-family: "Intel Clear";
+    font-weight: normal;
+    src: url("fonts/intel-clear/WOFF/ClearSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Intel Clear";
+    font-weight: bold;
+    src: url("fonts/intel-clear/WOFF/ClearSans-Bold.woff") format("woff");
+}
+
+* {
+    font-family: 'Intel Clear';
+}
+
+/*
+.barcode-preview {
+    background-color: powderblue;
+    width: 5%;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+    float: inline-start;
+    
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    transition:all .25s ease;
+}
+
+.barcode-preview:hover {
+    background-color: rgb(135, 196, 204);
+    transform: scale(1.05);
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    transition:all .25s ease;
+}
+
+.store-name {
+    font-size: larger;
+} */
+body {
+    background-color: #fcf5e8;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+#imageContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Add styling for the image tiles and upload tile */
+.imageTile,
+.uploadTile {
+    width: calc(30% - 2%); /* Set a relative width for each tile */
+    height: auto; /* Let the height adjust according to the content */
+    max-width: 150px; /* Set a maximum width to prevent tiles from becoming too large */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    border: 2px #aaa;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 1%; /* Add some margin between tiles */
+    position: relative; /* Add relative positioning for absolute child */
+    overflow: hidden; /* Hide overflow content */
+    box-sizing: border-box;
+}
+
+.imageTile:hover,
+.uploadTile:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.10)
+}
+
+/* Add styling for the pop-up container */
+.popup-container {
+    width: 30%;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-image {
+    max-width: 100%;
+    max-height: 80vh; /* Limit height to 80% of viewport height */
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+}
+
+
+/* Add styling for the pop-up form */
+.popup-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.popup-form input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.popup-form input[type="text"],
+.popup-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.popup-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-form button:hover {
+    background-color: #0056b3;
+}

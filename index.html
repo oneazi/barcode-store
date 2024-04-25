@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>Barcode Store</title>
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
@@ -12,7 +13,38 @@
         <input id="fileupload" name="barcodeImage" type="file" />
         <input type="submit" value="Submit" id="submit" />
      </form>
+    <div id="frys" class='barcode-preview' onclick="getBarcode(this.id)">
+      <div class="store-name">frys</div>
+      <div class="description">my card</div>
+    </div>
+    <div id="safeway" class='barcode-preview' onclick="getBarcode(this.id)">
+      <div class="store-name">safeway</div>
+      <div class="description">my card</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Upload</h1>
+        <div id="imageContainer"></div>
+    </div>
+
+    <div class="popup-container">
+        <img class="popup-image" alt="Popup Image">
+        <span class="close-btn" onclick="closePopup()">×</span>
+    </div>
 
     <script src="main.js"></script>
 </body>
 </html>
+

@@ -5,7 +5,7 @@ from PIL import Image
 import sqlite3
 from io import BytesIO
 
-bc.base.Barcode.default_writer_options['write_text'] = False
+# bc.base.Barcode.default_writer_options['write_text'] = False    # suppress the numerical output below the barcode svg
 DATABASE = 'data/barcodeStore.db'
 
 # base flask app
