@@ -39,7 +39,18 @@
         <div id="imageContainer"></div>
     </div>
 
-    <div class="popup-container">
+    <div class="popup-container" id="popupContainer">
+        <div class="popup-form">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <form id="imageForm">
+                <input type="text" id="titleInput" placeholder="Title">
+                <textarea id="descriptionInput" placeholder="Description"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="popup-container" id="imagePopupContainer">
         <img class="popup-image" alt="Popup Image">
         <span class="close-btn" onclick="closePopup()">×</span>
     </div>
@@ -47,4 +58,8 @@
     <script src="main.js"></script>
 </body>
 </html>
+
+
+
+
 
